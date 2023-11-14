@@ -38,14 +38,14 @@ module.exports = {
       username: 'amalia18',
       password: '123456', // Gantilah dengan kata sandi yang sudah di-hash
       email: 'amalia@gmail.com',
-      created_at: new Date(),
-      updated_at: new Date(),
+      createdAt: new Date(),
+      updatedAt: new Date(),
     }, {
       username: 'kartika08',
       password: '789101', // Gantilah dengan kata sandi yang sudah di-hash
       email: 'kartika@gmail.com',
-      created_at: new Date(),
-      updated_at: new Date(),
+      createdAt: new Date(),
+      updatedAt: new Date(),
     }], {});
   },
 

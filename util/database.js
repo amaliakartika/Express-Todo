@@ -2,12 +2,12 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 const db = new Sequelize(
-    process.env.PG_DB,
-    process.env.PG_USER,
-    process.env.PG_PASSWORD,
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
     {
-        host: process.env.PG_HOST,
-        dialect: 'postgres',
+        host: process.env.DB_HOST,
+        dialect: 'mysql',
     }
 );
 
