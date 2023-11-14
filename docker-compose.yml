@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  node_app:
+    container_name: node_app
+    build: .
+    image: sahda24/node_live_app
+    ports:
+      - "3000:3000"
+    environment:
+      - PG_DB=todo_db
+      - PG_USER=postgres
+      - PG_PASSWORD=postgres
+      - PG_HOST=todo_node_db
+    depends_on:
+      - todo_node_db
+  
+  todo_node_db:
+    container_name: todo_node_db
+    image: postgres:12
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=todo_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - node_db_data:/var/lib/postgresql/data
+
+volumes:
+  node_db_data: {}
+
+
+
